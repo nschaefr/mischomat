@@ -1,0 +1,418 @@
+{
+    "1": {
+        "name": "Skinny Margarita",
+        "zutaten": {
+            "34": 17.5,
+            "5": 67.5,
+            "33": 15
+        },
+        "gesamtmenge_ml": 500
+    },
+    "2": {
+        "name": "Long Island Iced Tea",
+        "zutaten": {
+            "30": 7.5,
+            "28": 7.5,
+            "27": 7.5,
+            "34": 7.5,
+            "25": 7.5,
+            "39": 55
+        },
+        "gesamtmenge_ml": 500
+    },
+    "3": {
+        "name": "Gin Buck",
+        "zutaten": {
+            "27": 25,
+            "14": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "4": {
+        "name": "Tequila Sunrise",
+        "zutaten": {
+            "34": 17.5,
+            "5": 7.5,
+            "10": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "5": {
+        "name": "Aperol Spritz",
+        "zutaten": {
+            "24": 30,
+            "37": 70
+        },
+        "gesamtmenge_ml": 500
+    },
+    "6": {
+        "name": "Pina Colada",
+        "zutaten": {
+            "30": 25,
+            "9": 67.5,
+            "21": 7.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "7": {
+        "name": "Moscow Mule",
+        "zutaten": {
+            "28": 10,
+            "16": 40,
+            "39": 50
+        },
+        "gesamtmenge_ml": 500
+    },
+    "8": {
+        "name": "Cuba Libre",
+        "zutaten": {
+            "31": 32.5,
+            "4": 67.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "9": {
+        "name": "Sex on the Beach",
+        "zutaten": {
+            "30": 12.5,
+            "22": 12.5,
+            "8": 50,
+            "10": 25
+        },
+        "gesamtmenge_ml": 500
+    },
+    "10": {
+        "name": "Mai Tai",
+        "zutaten": {
+            "31": 12.5,
+            "30": 12.5,
+            "33": 10,
+            "23": 25,
+            "39": 15,
+            "10": 25
+        },
+        "gesamtmenge_ml": 500
+    },
+    "11": {
+        "name": "Rum Fizz",
+        "zutaten": {
+            "30": 17.5,
+            "39": 10,
+            "18": 15,
+            "17": 57.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "12": {
+        "name": "French 75",
+        "zutaten": {
+            "18": 17.5,
+            "34": 7.5,
+            "40": 17.5,
+            "37": 57.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "13": {
+        "name": "Paloma",
+        "zutaten": {
+            "34": 17.5,
+            "5": 15,
+            "19": 67.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "14": {
+        "name": "Beschleuniger Nr. 2",
+        "zutaten": {
+            "28": 37.5,
+            "5": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "15": {
+        "name": "Beschleuniger Nr. 1",
+        "zutaten": {
+            "28": 37.5,
+            "12": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "16": {
+        "name": "Wodka Wellness",
+        "zutaten": {
+            "28": 22.5,
+            "39": 45,
+            "16": 32.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "17": {
+        "name": "Gr\u00fcne Wiese",
+        "zutaten": {
+            "25": 37.5,
+            "37": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "18": {
+        "name": "Karma Cham\u00e4leon",
+        "zutaten": {
+            "34": 30,
+            "3": 70
+        },
+        "gesamtmenge_ml": 500
+    },
+    "19": {
+        "name": "Schwemmhile",
+        "zutaten": {
+            "30": 25,
+            "4": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "20": {
+        "name": "Dark 'n' Stormy",
+        "zutaten": {
+            "31": 25,
+            "16": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "21": {
+        "name": "Planters Punch",
+        "zutaten": {
+            "31": 12.5,
+            "5": 50,
+            "10": 25,
+            "33": 12.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "22": {
+        "name": "Rum Punch",
+        "zutaten": {
+            "31": 25,
+            "39": 10,
+            "33": 7.5,
+            "5": 7.5,
+            "10": 50
+        },
+        "gesamtmenge_ml": 500
+    },
+    "23": {
+        "name": "Sea Breeze",
+        "zutaten": {
+            "28": 25,
+            "7": 50,
+            "10": 25
+        },
+        "gesamtmenge_ml": 500
+    },
+    "24": {
+        "name": "Gin Fizz",
+        "zutaten": {
+            "27": 22.5,
+            "18": 15,
+            "17": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "25": {
+        "name": "Lynchburg Lemor",
+        "zutaten": {
+            "35": 20,
+            "33": 7.5,
+            "27": 7.5,
+            "40": 65
+        },
+        "gesamtmenge_ml": 500
+    },
+    "26": {
+        "name": "Hurricane",
+        "zutaten": {
+            "30": 25,
+            "39": 12.5,
+            "33": 12.5,
+            "9": 50
+        },
+        "gesamtmenge_ml": 500
+    },
+    "27": {
+        "name": "Blue Lagoon",
+        "zutaten": {
+            "28": 17.5,
+            "25": 15,
+            "40": 67.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "28": {
+        "name": "Kentucky Mule",
+        "zutaten": {
+            "35": 25,
+            "16": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "29": {
+        "name": "Tequila Fizz",
+        "zutaten": {
+            "34": 22.5,
+            "18": 15,
+            "17": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "30": {
+        "name": "Tequila Ginger",
+        "zutaten": {
+            "34": 22.5,
+            "16": 77.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "31": {
+        "name": "Gin Mule",
+        "zutaten": {
+            "27": 22.5,
+            "16": 77.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "32": {
+        "name": "Gin Lemon Fresh",
+        "zutaten": {
+            "27": 10,
+            "8": 5,
+            "40": 5,
+            "28": 80
+        },
+        "gesamtmenge_ml": 500
+    },
+    "33": {
+        "name": "Bittersweet Ginger",
+        "zutaten": {
+            "28": 17.5,
+            "16": 40,
+            "24": 7.5,
+            "40": 35
+        },
+        "gesamtmenge_ml": 500
+    },
+    "34": {
+        "name": "Gin Sour",
+        "zutaten": {
+            "27": 15,
+            "34": 25,
+            "17": 60
+        },
+        "gesamtmenge_ml": 500
+    },
+    "35": {
+        "name": "Batanga",
+        "zutaten": {
+            "34": 20,
+            "4": 80
+        },
+        "gesamtmenge_ml": 500
+    },
+    "36": {
+        "name": "Raspberry Mojito",
+        "zutaten": {
+            "31": 15,
+            "39": 17.5,
+            "5": 67.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "37": {
+        "name": "Suffering Bastard",
+        "zutaten": {
+            "35": 12.5,
+            "39": 17.5,
+            "27": 17.5,
+            "16": 52.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "38": {
+        "name": "Stone Cold Ginger",
+        "zutaten": {
+            "35": 25,
+            "16": 75
+        },
+        "gesamtmenge_ml": 500
+    },
+    "39": {
+        "name": "Lillet Lemon",
+        "zutaten": {
+            "36": 37.5,
+            "34": 7.5,
+            "40": 55
+        },
+        "gesamtmenge_ml": 500
+    },
+    "40": {
+        "name": "Cancun Cooler",
+        "zutaten": {
+            "31": 12.5,
+            "39": 25,
+            "8": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "41": {
+        "name": "Fancy Drink",
+        "zutaten": {
+            "31": 25,
+            "33": 12.5,
+            "10": 62.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "42": {
+        "name": "Belo Buck",
+        "zutaten": {
+            "39": 10,
+            "8": 25,
+            "9": 22.5,
+            "5": 17.5,
+            "16": 25
+        },
+        "gesamtmenge_ml": 500
+    },
+    "43": {
+        "name": "Blueberry Smash",
+        "zutaten": {
+            "39": 22.5,
+            "7": 12.5,
+            "10": 17.5,
+            "34": 15,
+            "5": 32.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "44": {
+        "name": "Tropic Tonic",
+        "zutaten": {
+            "28": 7.5,
+            "10": 40,
+            "8": 7.5,
+            "9": 7.5,
+            "16": 37.5
+        },
+        "gesamtmenge_ml": 500
+    },
+    "45": {
+        "name": "Bitter Tonic",
+        "zutaten": {
+            "28": 22.5,
+            "10": 15,
+            "5": 15,
+            "15": 40,
+            "18": 7.5
+        },
+        "gesamtmenge_ml": 500
+    }
+}

@@ -1,0 +1,4 @@
+- linke spalte kalibr + reinigung + beenden
+- config etwas größer
+- zubereitungsframe
+- hardware funktionen
