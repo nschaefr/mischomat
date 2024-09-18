@@ -12,7 +12,7 @@ class PinCodeInterface(customtkinter.CTkFrame):
         self.pin_frame = customtkinter.CTkFrame(self)
         self.pin_frame.pack(fill="both", expand=True)
 
-        if self.customer:
+        if self.customer == 1:
             back_button = customtkinter.CTkButton(
                 self.pin_frame, text="Zurück", command=self.on_back_pressed, font=customtkinter.CTkFont(size=18), width=100, height=40
             )
@@ -36,9 +36,9 @@ class PinCodeInterface(customtkinter.CTkFrame):
         ]
 
         for (text, row, column) in buttons:
-            button = customtkinter.CTkButton(button_frame, text=text, width=70, height=70,
-                                             command=lambda num=text: self.append_pin(num), font=customtkinter.CTkFont(size=18))
-            button.grid(row=row, column=column, padx=4, pady=4)
+            button = customtkinter.CTkButton(button_frame, text=text, width=75, height=75,
+                                             command=lambda num=text: self.append_pin(num), font=customtkinter.CTkFont(size=22))
+            button.grid(row=row, column=column, padx=2, pady=2)
 
     def append_pin(self, num):
         if len(self.entered_pin) < 4:
@@ -55,7 +55,10 @@ class PinCodeInterface(customtkinter.CTkFrame):
 
     def check_pin(self):
         if self.entered_pin == self.correct_pin:
-            self.parent_app.show_configuration_interface()
+            if self.customer == 0 or 1:
+                self.parent_app.show_configuration_interface()
+            elif self.customer == 2:
+                self.parent_app.show_configuration_interface()
             self.reset_pin()
         else:
             self.reset_pin()

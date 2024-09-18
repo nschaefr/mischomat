@@ -18,17 +18,25 @@ class App(customtkinter.CTk):
         self.frame_container = customtkinter.CTkFrame(self)
         self.frame_container.pack(fill="both", expand=True)
 
+        self.loading_frame = customtkinter.CTkFrame(self.frame_container)
+        self.loading_frame.pack(fill="both", expand=True)
+        loading_label = customtkinter.CTkLabel(
+            self.loading_frame, text="Mischomat wird gestartet...", font=customtkinter.CTkFont(size=25))
+        loading_label.pack(expand=True)
+
         # Frames einmalig erstellen, aber nicht direkt anzeigen
         self.pin_frame = PinCodeInterface(self, False)
         self.pin_frame_cust = PinCodeInterface(self, True)
+        self.config_frame = ConfigurationInterface(self)
+        self.customer_frame = CustomerInterface(self)
         self.prep_frame = PreparationInterface(self, None, None, None, None)
 
         # Starte mit dem PinCode Interface (customer=False)
-        self.show_pin_code_interface(False)
+        self.show_pin_code_interface(0)
 
     def show_configuration_interface(self):
         self.clear_frame()  # Versteckt alle anderen Frames
-        self.config_frame = ConfigurationInterface(self)
+        self.config_frame.refresh_fuellstand_values()
         self.config_frame.pack(fill="both", expand=True)
 
     def show_pin_code_interface(self, customer):
@@ -44,10 +52,12 @@ class App(customtkinter.CTk):
         self.clear_frame()  # Versteckt alle anderen Frames
 
         if config:
-            self.customer_frame = CustomerInterface(self)
+            self.customer_frame.update_buttons()
             self.customer_frame.pack(fill="both", expand=True)
         else:
             self.customer_frame.pack(fill="both", expand=True)
+
+        self.loading_frame.pack_forget()
 
     def show_preparation_interface(self, drink_name, ingredients, strength, fill):
         self.clear_frame()

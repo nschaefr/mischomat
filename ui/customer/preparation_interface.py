@@ -87,6 +87,7 @@ class PreparationInterface(customtkinter.CTkFrame):
                         percentage = self.percentage_alc
                 ingredient_info = data[ingredient_id]
                 required_fill = percentage * self.fill / 100
-                ingredient_info['fuellstand_ml'] -= required_fill
+                ingredient_info['fuellstand_ml'] = int(
+                    ingredient_info['fuellstand_ml'] - required_fill)
 
         save_json("database/liquids.json", data)

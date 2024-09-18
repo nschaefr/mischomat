@@ -41,7 +41,7 @@ class ConfigurationInterface(customtkinter.CTkFrame):
     def create_drink_options(self):
         """Erstellt die Longdrink- und Mischgetränk-Auswahloptionen."""
         self.longdrink_label = customtkinter.CTkLabel(
-            self.frame, text="Longdrinks", font=customtkinter.CTkFont(size=16))
+            self.frame, text="Longdrinks", font=customtkinter.CTkFont(size=19))
         self.longdrink_label.pack(pady=(14, 6))
 
         self.longdrink_option = customtkinter.CTkOptionMenu(
@@ -51,7 +51,7 @@ class ConfigurationInterface(customtkinter.CTkFrame):
             str(self.longdrink_data["1"]["gesamtmenge_ml"]) + "ml")
 
         self.mix_label = customtkinter.CTkLabel(
-            self.frame, text="Mischgetränke", font=customtkinter.CTkFont(size=16))
+            self.frame, text="Mischgetränke", font=customtkinter.CTkFont(size=19))
         self.mix_label.pack(pady=(14, 6))
 
         self.mix_option = customtkinter.CTkOptionMenu(
@@ -60,18 +60,16 @@ class ConfigurationInterface(customtkinter.CTkFrame):
         self.mix_option.set(str(self.mix_data["1"]["gesamtmenge_ml"]) + "ml")
 
         self.button = customtkinter.CTkButton(
-            self.frame, command=self.size_button_event, text="Weiter")
-        self.button.pack(pady=(120, 10))
-
-        self.quit_button = customtkinter.CTkButton(
-            self.frame, command=self.quit_program, text="Beenden", fg_color="red")
-        self.quit_button.pack(pady=(0, 18))
+            self.frame, command=self.size_button_event, text="Weiter", font=customtkinter.CTkFont(size=16), width=120, height=40)
+        self.button.pack(pady=(150, 10))
 
     def create_drink_widgets(self):
         """Erstellt die Getränkeauswahl-Widgets."""
         for drink_id, drink_info in self.drinks_data.items():
             drink_frame = customtkinter.CTkFrame(self.scrollable_frame)
             drink_frame.pack(pady=5, fill="x")
+
+            drink_frame.drink_id = drink_id
 
             drink_name = drink_info["name"]
 
@@ -126,11 +124,11 @@ class ConfigurationInterface(customtkinter.CTkFrame):
             drink_frame.check_var = check_var
 
     def get_anschlussplatz_values(self, drink_info):
-        """Bestimmt die verfügbaren Anschlussplatzwerte basierend auf `belegungswert`."""
+        """Bestimmt die verfügbaren Anschlussplatzwerte basierend auf belegungswert."""
         return ["-"] + [str(i) for i in range(1, 10)] if drink_info["belegungswert"] == 0 else ["-"] + [str(i) for i in range(10, 20)]
 
     def get_fuellstand_values(self, drink_info):
-        """Bestimmt die verfügbaren Füllstandswerte basierend auf `belegungswert`."""
+        """Bestimmt die verfügbaren Füllstandswerte basierend auf belegungswert."""
         if drink_info["belegungswert"] == 1:
             return [str(i) + "ml" for i in range(250, 1500, 250)]
         else:
@@ -155,10 +153,6 @@ class ConfigurationInterface(customtkinter.CTkFrame):
         save_json('database/mix.json', self.mix_data)
 
         self.parent_app.show_customer_interface(True)
-
-    def quit_program(self):
-        """Beendet das Programm."""
-        sys.exit()
 
     def toggle_option_menu(self, check_var, frame, drink_id):
         """Aktualisiert die Anzeige der OptionMenu und Füllstand basierend auf der Auswahl."""
@@ -205,3 +199,18 @@ class ConfigurationInterface(customtkinter.CTkFrame):
         if drink_id in self.drinks_data:
             self.drinks_data[drink_id]["fuellstand_ml"] = fuellstand_value
             save_json("database/liquids.json", self.drinks_data)
+
+    def refresh_fuellstand_values(self):
+        """Aktualisiert die Füllstandswerte für alle ausgewählten Getränke."""
+        # Lade aktuelle Daten aus der JSON-Datei neu
+        self.drinks_data = load_json("database/liquids.json")
+
+        # Iteriere durch alle Getränke im scrollable_frame und aktualisiere deren Füllstände
+        for drink_frame in self.scrollable_frame.winfo_children():
+            drink_id = drink_frame.drink_id
+
+            # Falls das Getränk als gewählt markiert ist, aktualisiere die Füllstandswerte
+            if self.drinks_data[drink_id]["gewaehlt"] == 1:
+                fuellstand_value = str(
+                    self.drinks_data[drink_id]["fuellstand_ml"]) + "ml"
+                drink_frame.fuellstand_menu.set(fuellstand_value)

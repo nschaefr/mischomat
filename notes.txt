@@ -1,4 +1,3 @@
-- linke spalte kalibr + reinigung + beenden
-- config etwas größer
-- zubereitungsframe
+- linke spalte kalibr + reinigung
 - hardware funktionen
+- zutaten extra popup
