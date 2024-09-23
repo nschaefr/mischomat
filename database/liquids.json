@@ -3,7 +3,7 @@
         "name": "Energy",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 2,
+        "anschlussplatz": 4,
         "gewaehlt": 1,
         "alcohol": 0
     },
@@ -11,7 +11,7 @@
         "name": "Zitronenlimonade",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 3,
+        "anschlussplatz": 6,
         "gewaehlt": 1,
         "alcohol": 0
     },
@@ -19,23 +19,23 @@
         "name": "Orangenlimonade",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 3,
+        "gewaehlt": 1,
         "alcohol": 0
     },
     "4": {
         "name": "Cola",
-        "fuellstand_ml": 1250,
+        "fuellstand_ml": 850,
         "belegungswert": 0,
-        "anschlussplatz": 5,
+        "anschlussplatz": 9,
         "gewaehlt": 1,
         "alcohol": 0
     },
     "5": {
         "name": "Orangensaft",
-        "fuellstand_ml": 850,
+        "fuellstand_ml": 450,
         "belegungswert": 0,
-        "anschlussplatz": 3,
+        "anschlussplatz": 1,
         "gewaehlt": 1,
         "alcohol": 0
     },
@@ -43,24 +43,24 @@
         "name": "Apfelsaft",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 7,
+        "gewaehlt": 1,
         "alcohol": 0
     },
     "7": {
         "name": "Cranberrysaft",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 2,
+        "gewaehlt": 1,
         "alcohol": 0
     },
     "8": {
         "name": "Ananassaft",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 5,
+        "gewaehlt": 1,
         "alcohol": 0
     },
     "9": {
@@ -75,8 +75,8 @@
         "name": "Grapefruitsaft",
         "fuellstand_ml": 2000,
         "belegungswert": 0,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 8,
+        "gewaehlt": 1,
         "alcohol": 0
     },
     "11": {
@@ -115,8 +115,8 @@
         "name": "Tonic Water",
         "fuellstand_ml": 150,
         "belegungswert": 0,
-        "anschlussplatz": 4,
-        "gewaehlt": 1,
+        "anschlussplatz": 0,
+        "gewaehlt": 0,
         "alcohol": 0
     },
     "16": {
@@ -169,9 +169,9 @@
     },
     "22": {
         "name": "Pfirsichlik\u00f6r",
-        "fuellstand_ml": 500,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 12,
+        "anschlussplatz": 13,
         "gewaehlt": 1,
         "alcohol": 1
     },
@@ -179,15 +179,15 @@
         "name": "Amaretto",
         "fuellstand_ml": 2000,
         "belegungswert": 1,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 12,
+        "gewaehlt": 1,
         "alcohol": 1
     },
     "24": {
         "name": "Aperol",
-        "fuellstand_ml": 750,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 11,
+        "anschlussplatz": 10,
         "gewaehlt": 1,
         "alcohol": 1
     },
@@ -195,29 +195,29 @@
         "name": "Blue Cura\u00e7ao",
         "fuellstand_ml": 2000,
         "belegungswert": 1,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 15,
+        "gewaehlt": 1,
         "alcohol": 1
     },
     "26": {
         "name": "Goldbrand",
         "fuellstand_ml": 2000,
         "belegungswert": 1,
-        "anschlussplatz": 0,
-        "gewaehlt": 0,
+        "anschlussplatz": 16,
+        "gewaehlt": 1,
         "alcohol": 1
     },
     "27": {
         "name": "Gin",
-        "fuellstand_ml": 475,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 13,
+        "anschlussplatz": 17,
         "gewaehlt": 1,
         "alcohol": 1
     },
     "28": {
         "name": "Wodka",
-        "fuellstand_ml": 400,
+        "fuellstand_ml": 150,
         "belegungswert": 1,
         "anschlussplatz": 11,
         "gewaehlt": 1,
@@ -225,9 +225,9 @@
     },
     "29": {
         "name": "Korn",
-        "fuellstand_ml": 500,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 10,
+        "anschlussplatz": 14,
         "gewaehlt": 1,
         "alcohol": 1
     },
@@ -235,7 +235,7 @@
         "name": "Wei\u00dfer Rum",
         "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 15,
+        "anschlussplatz": 18,
         "gewaehlt": 1,
         "alcohol": 1
     },
@@ -243,15 +243,15 @@
         "name": "Dunkler Rum",
         "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 15,
-        "gewaehlt": 1,
+        "anschlussplatz": 0,
+        "gewaehlt": 0,
         "alcohol": 1
     },
     "32": {
         "name": "Whiskey",
-        "fuellstand_ml": 750,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 11,
+        "anschlussplatz": 19,
         "gewaehlt": 1,
         "alcohol": 1
     },
@@ -267,8 +267,8 @@
         "name": "Tequila",
         "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 11,
-        "gewaehlt": 1,
+        "anschlussplatz": 0,
+        "gewaehlt": 0,
         "alcohol": 1
     },
     "35": {
@@ -291,13 +291,13 @@
         "name": "Sekt",
         "fuellstand_ml": 250,
         "belegungswert": 1,
-        "anschlussplatz": 12,
-        "gewaehlt": 1,
+        "anschlussplatz": 0,
+        "gewaehlt": 0,
         "alcohol": 1
     },
     "38": {
         "name": "Cacha\u00e7a",
-        "fuellstand_ml": 2000,
+        "fuellstand_ml": 250,
         "belegungswert": 1,
         "anschlussplatz": 0,
         "gewaehlt": 0,

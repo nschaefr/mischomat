@@ -7,7 +7,7 @@ class MissingInterface(customtkinter.CTkToplevel):
         self.parent_app = parent_app
         self.ingredients = ingredients
 
-        self.title("Fehlende Zutaten")
+        self.title("Hinweis")
         self.geometry("300x200")  # Größe des Popups
         self.resizable(False, False)  # Größe nicht veränderbar
 
@@ -24,7 +24,7 @@ class MissingInterface(customtkinter.CTkToplevel):
 
     def setup_ui(self):
         # Zutatenliste als Stichpunkte erstellen
-        ingredients_text = "\n".join(
+        ingredients_text = "Es fehlen Zutaten für dieses Getränk, bitte geben Sie jemandem Bescheid.\n\n" + "\n".join(
             [f"- {ingredient}" for ingredient in self.ingredients])
 
         # Label mit den fehlenden Zutaten als Stichpunkte
@@ -39,7 +39,7 @@ class MissingInterface(customtkinter.CTkToplevel):
             self, text="Ok", command=self.on_confirm,
             font=customtkinter.CTkFont(size=16), width=120, height=40
         )
-        ok_button.pack(side="bottom", pady=20)
+        ok_button.pack(side="bottom", pady=(10, 20))
 
     def on_confirm(self):
         """Aktion bei Bestätigung."""

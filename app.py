@@ -12,8 +12,12 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         self.title("Mischomat")
-        self.geometry("800x400")
         self.resizable(False, False)
+        screenwidth = self.winfo_screenwidth()
+        screenheight = self.winfo_screenheight()
+        self.geometry(f"{screenwidth}x{screenheight}")
+        self.wm_attributes('-fullscreen', True)
+        self.state('normal')
 
         self.frame_container = customtkinter.CTkFrame(self)
         self.frame_container.pack(fill="both", expand=True)

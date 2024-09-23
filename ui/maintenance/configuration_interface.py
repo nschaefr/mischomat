@@ -61,7 +61,7 @@ class ConfigurationInterface(customtkinter.CTkFrame):
 
         self.button = customtkinter.CTkButton(
             self.frame, command=self.size_button_event, text="Weiter", font=customtkinter.CTkFont(size=16), width=120, height=40)
-        self.button.pack(pady=(150, 10))
+        self.button.pack(side="bottom", pady=14)
 
     def create_drink_widgets(self):
         """Erstellt die Getränkeauswahl-Widgets."""
@@ -123,10 +123,6 @@ class ConfigurationInterface(customtkinter.CTkFrame):
             drink_frame.fuellstand_menu = fuellstand_menu
             drink_frame.check_var = check_var
 
-    def get_anschlussplatz_values(self, drink_info):
-        """Bestimmt die verfügbaren Anschlussplatzwerte basierend auf belegungswert."""
-        return ["-"] + [str(i) for i in range(1, 10)] if drink_info["belegungswert"] == 0 else ["-"] + [str(i) for i in range(10, 20)]
-
     def get_fuellstand_values(self, drink_info):
         """Bestimmt die verfügbaren Füllstandswerte basierend auf belegungswert."""
         if drink_info["belegungswert"] == 1:
@@ -174,11 +170,12 @@ class ConfigurationInterface(customtkinter.CTkFrame):
 
             frame.option_menu.set("-")
             frame.fuellstand_menu.set("250ml")
-
             self.drinks_data[drink_id]["anschlussplatz"] = 0
             if self.drinks_data[drink_id]["belegungswert"] == 1:
                 self.drinks_data[drink_id]["fuellstand_ml"] = 250
+
         save_json("database/liquids.json", self.drinks_data)
+        self.refresh_option_menus()
 
     def update_place(self, frame, drink_id, check_var):
         """Aktualisiert den Anschlussplatz basierend auf der Auswahl."""
@@ -192,6 +189,26 @@ class ConfigurationInterface(customtkinter.CTkFrame):
         if drink_id in self.drinks_data:
             self.drinks_data[drink_id]["anschlussplatz"] = value
             save_json("database/liquids.json", self.drinks_data)
+
+        self.refresh_option_menus()
+
+    def get_anschlussplatz_values(self, drink_info):
+        """Bestimmt die verfügbaren Anschlussplatzwerte basierend auf belegungswert und filtert belegte Plätze."""
+        # Alle belegten Plätze sammeln
+        belegte_plaetze = {self.drinks_data[drink]["anschlussplatz"]
+                           for drink in self.drinks_data if self.drinks_data[drink]["anschlussplatz"] != 0}
+
+        # Festlegen der Anschlussplatzbereiche
+        if drink_info["belegungswert"] == 0:
+            moegliche_plaetze = set(range(1, 10))  # Bereich 1-9
+        else:
+            moegliche_plaetze = set(range(10, 20))  # Bereich 10-19
+
+        # Verfügbare Plätze, indem belegte Plätze ausgeschlossen werden
+        verfuegbare_plaetze = moegliche_plaetze - belegte_plaetze
+
+        # Rückgabe als Liste von Strings, "-" für keinen Platz
+        return ["-"] + [str(platz) for platz in sorted(verfuegbare_plaetze)]
 
     def update_fuellstand(self, drink_id, value):
         """Aktualisiert den Füllstand des Getränks."""
@@ -214,3 +231,15 @@ class ConfigurationInterface(customtkinter.CTkFrame):
                 fuellstand_value = str(
                     self.drinks_data[drink_id]["fuellstand_ml"]) + "ml"
                 drink_frame.fuellstand_menu.set(fuellstand_value)
+
+    def refresh_option_menus(self):
+        """Aktualisiert die OptionMenus für alle Getränke basierend auf den belegten Plätzen."""
+        for drink_frame in self.scrollable_frame.winfo_children():
+            drink_id = drink_frame.drink_id
+            anschlussplatz_value = str(
+                self.drinks_data[drink_id]["anschlussplatz"])
+
+            # Aktualisiere die verfügbaren Anschlussplatzoptionen
+            option_values = self.get_anschlussplatz_values(
+                self.drinks_data[drink_id])
+            drink_frame.option_menu.configure(values=option_values)

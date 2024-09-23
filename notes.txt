@@ -1,3 +1,2 @@
 - linke spalte kalibr + reinigung
 - hardware funktionen
-- zutaten extra popup

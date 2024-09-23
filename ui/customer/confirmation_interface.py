@@ -44,7 +44,7 @@ class ConfirmationInterface(customtkinter.CTkToplevel):
             self, text="Abbrechen", command=self.on_cancel,
             font=customtkinter.CTkFont(size=16), width=120, height=40
         )
-        cancel_button.pack(pady=5)
+        cancel_button.pack(pady=2)
 
     def on_confirm(self):
         """Aktion bei Bestätigung."""
